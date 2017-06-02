@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> User Add Assignment </title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('input').click(function(){
+					//get the data from the form
+
+					$('#addform').submit(function(){
+						var user={
+						First: $('#firstn').val(),
+						Last: $('#lastn').val(),
+						Email: $("#emailn").val(),
+						ContactNo: $("#comnom").val()
+					}
+					})
+					$('th').append('user');
+				})
+				$('button').click(function(){
+					$('#addform').submit(function(){
+					});
+
+		</script>
+	</head>
+	<div id="container">
+		<body>
+		<h1> Add Users </h1>
+			<table>
+				<tr>
+					<th> First Name </th>
+					<th> Last Name </th>
+					<th> Email </th>
+					<th> Contact-No </th>
+				</tr>
+				<td id="first-name"></td>
+				<td id="last-name"></td>
+				<td id="email"></td>
+				<td id="phone"></td>
+			</table>
+		</body>
+		<div id="firstform">
+			<form id="addform" action="index3.html" method="post">
+				First Name:<input type="text" name="first" value=""  id="firstn" >
+				Last Name::<input type="text" name="last" value="" id="lastn" >
+				E-Mail Address:<input type="text" name="emal" value="" id="emailn" >
+				Contact Number:<input type="number" name="num" value="" id="connom" >
+				<input type="submit" name="submit" value="Submit">
+			</form>
+			<button type="button"> Add Me! </button>
+		</div>
+	</div>
+
+</html>

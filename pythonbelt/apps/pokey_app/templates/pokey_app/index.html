@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Pokey Poke Project </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1> Welcome {{ full_name }} </h1>
+        <h5> {{count}} people have poked you</h5>
+        <ul>
+          {% for user_id in userToPoke%}
+            <li> {{user}} has poked you {{ count }} times</li>
+          (% endfor %}
+
+          <h3> People You May Want To Poke</h3
+          <tr>
+            <th>Name</th>
+            <th>Alias</th>
+            <th>Email</th>
+            <th>Poke History</th>
+            <th>Action</th>
+          </tr>
+    </body>
+</html>

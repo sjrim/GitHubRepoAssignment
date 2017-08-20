@@ -12,19 +12,31 @@ app.set('view engine', 'ejs');
 app.get('/', function(req,res){
     res.render("index");
 });
-app.post('/users', function(req,res){
-    context={
-        req.session.name=
-    }
-    res.redirectrender("results");
+
+
+
+
+
+
+
+
+var server = app.listen(port, function(){
+    console.log("Now listening on port ${ port }")
 });
+var io = require('socket.io').listen(server);
 
-
-
-
-
-
-
-app.listen('port', function(){
-    consolelog("now listening to port");
-})
+io.sockets.on('connection', function(socket){
+    socket.on("button_clicked", function(data){
+      console.log("Someone clicked a button! Reason:" +data.reason);
+      socket.emit('server_response', {response: "sockets are the best!"});
+    });
+    console.log("Client/socket is connected!");
+    console.log("Client/socket id is:", socket.id);
+    socket.on("posting_form", function(data){
+        console.log("Someone submitted a form"+ data.name + data.location + data.Favoritelang);
+        socket.emit('updated_message', function(){
+            console.log(Math.floor(math.random()*100000));
+        })
+    })
+  });
+  

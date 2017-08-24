@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Shawns Otter Buddies</title>
+</head>
+<body>
+<div id="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h2>Super Awesome Otters</h2>
+      </div>
+    </div>
+    <div class="panel-body">
+    <ul>
+        <% for (var x in otters) { %>
+        <li>Name: <a href="<%= otters[x].id %>"><%= otters[x].name %></a>, Age: <%= otters[x].age %>, Size: <%= otters[x].size %></li>
+        <% } %>
+    </ul>
+    </div>
+    <button class="btn btn-default"><a href="/new">Add an Otter</a></button>
+</div>
+</body>
+</html>
